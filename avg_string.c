@@ -1,3 +1,4 @@
+//https://www.facebook.com/groups/tailieuhcmus/posts/1363622767604049/ câu 3
 #include <stdio.h>
 #include <string.h>
 float Check_Count_And_Sum(int *a, char *str);
