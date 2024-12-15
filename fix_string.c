@@ -1,5 +1,4 @@
-//intput "  dAng   hOAng   KHANG   "
-//output "Dang Hoang Khang"
+//https://cuuduongthancong.com/pvf/453575/ky-thuat-lap-trinh//cq_ktlt_2014.pdf?src=afile&action=hover câu 1
 #include <stdio.h>
 #include <string.h>
 // khai báo nguyên mẫu hàm
