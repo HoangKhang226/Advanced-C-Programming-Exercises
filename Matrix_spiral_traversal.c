@@ -47,7 +47,7 @@ void input_matrix(int **a, int hang, int cot)
             scanf("%d", &a[i][j]);
         }
 }
-void selection_sort_in_matrix(int **a, int hang, int cot)
+void selection_sort_in_matrix(int **a, int hang, int cot)// có thể dùng cách sao chép mảng 2 chiều qua mảng 1 chiều rồi dùng bubble sort, nhưng tại tui sỉ gái nên tui dùng luôn chuỗi 2 chiều =))))
 {
     for (int i = 0; i < hang; i++)
     {
@@ -92,7 +92,7 @@ void output_array(int **a, int hang, int cot)
         printf("\n");
     }
 }
-void matrix_spiral_traversal(int **a, int **ast, int hang, int cot)
+void matrix_spiral_traversal(int **a, int **ast, int hang, int cot)// nếu sao chép qua mảng 1 chiều thì chỉ cần tạo biến index=0 thoai, k cần col và row
 {
     int left = 0, right = hang - 1;
     int top = 0, bottom = cot - 1;
