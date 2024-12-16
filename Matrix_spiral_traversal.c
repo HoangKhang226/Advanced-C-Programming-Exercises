@@ -1,6 +1,6 @@
+// sắp xếp ma trận vuông theo hình xoắn ốc với thứ tự tăng dần
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 void input_matrix(int **a, int hang, int cot);
 void selection_sort_in_matrix(int **a, int hang, int cot);
 void output_array(int **a, int hang, int cot);
@@ -10,24 +10,32 @@ int main()
     int hang, cot;
     printf("rows: ");
     scanf("%d", &hang);
-    printf("columns: ");
-    scanf("%d", &cot);
+    while (1)
+    {
+        printf("columns: ");
+        scanf("%d", &cot);
+        if (cot == hang)
+            break;
+    }
     int **a = (int **)malloc(sizeof(int *) * hang); // cấp phát động
     for (int i = 0; i < hang; i++)
         a[i] = (int *)malloc(sizeof(int) * cot);
     input_matrix(a, hang, cot);
-    printf("mang ban dau la:\n");
+    printf("Input:\n");
     output_array(a, hang, cot);
     selection_sort_in_matrix(a, hang, cot);
     int **ast = (int **)malloc(sizeof(int *) * hang); // cấp phát động
     for (int i = 0; i < hang; i++)
         ast[i] = (int *)malloc(sizeof(int) * cot);
     matrix_spiral_traversal(a, ast, hang, cot);
-    printf("mang sau khi sap xep la:\n");
+    printf("Output:\n");
     output_array(ast, hang, cot);
     for (int i = 0; i < hang; i++) // giải phóng bộ nhớ
         free(a[i]);
     free(a);
+    for (int i = 0; i < hang; i++) // giải phóng bộ nhớ
+        free(ast[i]);
+    free(ast);
     return 0;
 }
 void input_matrix(int **a, int hang, int cot)
